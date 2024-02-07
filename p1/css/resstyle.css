@@ -1,0 +1,149 @@
+/*
+1) Definir las resoluciones minimas por dispositivos
+2) Aplicar reglas para mobiles
+3) Sobreescribir reglas para tablets
+4) Sobreescribir reglas para desktops
+*/
+
+/*
+breakpoints for responsive design
+mobile         0px - 576px
+tablet         577px - 1024px
+desktop        1024px - 1200px
+large desktop  1201px >
+*/
+/* media queries --> reglas de css que permite
+consultar atributos del dispositivo
+min-width
+
+| ---------- 577px ----------1024px--------1200px-------|
+*/
+* {
+    box-sizing: border-box;
+}
+
+body {
+    padding:0px;
+    margin:0px;
+}
+
+header {
+    background-color: #000;
+    color:#fff;
+}
+
+header h1 {
+    margin: 0px;
+    padding: 0.5rem;
+    font-size: 1.25rem;
+    display:flex;
+    align-items: center;
+}
+header h1 img {
+    border-radius: 50%;
+}
+header h1 span {
+    margin-left: 1rem;
+}
+
+header nav {
+    width:100%;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+    width:100%;
+}
+
+header nav ul li a {
+    width:100%;
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    color: #fff;
+    text-decoration: none;
+    border-bottom: 1px #ccc solid;
+}
+
+header nav ul li a:hover {
+    background-color: #ccc;
+    color:#000;
+}
+
+.hero img {
+    width:100%;
+    object-fit: cover;
+}
+
+.hero button {
+    width:100%;
+    padding: 1rem;
+    background-color: #000;
+    color:#fff;
+    font-size: 1.25rem;
+}
+
+.testimonials {
+    padding:0.25rem 0.5rem;
+    line-height: 1.5;
+    text-align: justify;
+}
+
+.testimonials img {
+    display:none;
+}
+@media (min-width: 557px) { /*tables*/
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    header nav {
+        width:auto;
+    }
+    header nav ul {
+        display:flex;
+    }
+    header nav ul li a {
+        border-bottom: none;
+        margin: 0px 0.5rem;
+    }
+    .hero {
+        position: relative;
+    }
+    .hero button {
+        position: absolute;
+        width:auto;
+        bottom: 1rem;
+        right: 1rem;
+    }
+    .testimonials {
+        width:50%;
+        position:relative;
+    }
+    .testimonials img {
+        display:block;
+        width:100%;
+        position: absolute;
+        left: 100%;
+        top: 0px;
+        object-fit: cover;
+    }
+}
+
+@media (min-width: 1024px) { /*desktop*/
+    .hero button {
+        bottom: 25%;
+        right: calc(50% - 86px);
+        border-radius: 27px;
+    }
+    .testimonials {
+        max-width: 512px;
+        margin: 0 calc((100% - 1024px) / 2);
+    }
+}
+
+@media (min-width: 1200px) { /*large desktop*/
+    
+}
