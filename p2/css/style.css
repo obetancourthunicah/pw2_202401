@@ -1,0 +1,41 @@
+@import url('menu.css');
+@import url('footer.css');
+@import url('main.css');
+@import url('grid.css');
+
+* {
+    --standard-padding: 1rem;
+    --border-radius: 17px;
+    box-sizing: border-box;
+
+    --small-device: 481px;
+    --medium-device: 769px;
+    --large-device: 1025px;
+    --xlarge-device: 1201px;
+}
+html {
+    height: 100%;
+}
+body {
+    --primary-color: #f0f0f0;
+    --primary-text-color: #333;
+    --secondary-color: #0a0099;
+    --secondary-text-color: #eeeeee;
+    background-color: var(--primary-color);
+    color: var(--primary-text-color);
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height:100%;
+}
+
+body.dark {
+    --primary-color: #0a0099;
+    --primary-text-color: #eeeeee;
+    --secondary-color: #f0f0f0;
+    --secondary-text-color: #333;
+}
+
+

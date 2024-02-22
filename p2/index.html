@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const btnDark = document.getElementById('btnDark');
+            btnDark.addEventListener('click', () => {
+                document.body.classList.toggle('dark');
+            });
+        });
+    </script>
+</head>
+<body class="">
+    <header>
+        <h1>Práctica 2</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Opcion 1</a></li>
+                <li><a href="#">Opcion 2</a></li>
+                <li><a href="#">Opcion 3</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Sección 1</h2>
+            <p>Contenido de la sección 1</p>
+        </section>
+        <section>
+            <h2>Sección 2</h2>
+            <p>Contenido de la sección 2</p>
+            <button id="btnDark">Dark</button>
+        </section>
+        <section>
+            <h2>Sección 3</h2>
+            <p>Contenido con grilla</p>
+            <section class="grid">
+                <div class="col-4 col-m-6">1</div>
+                <div class="col-2 col-m-4">2</div>
+            </section>
+        </section>
+        
+    </main>
+    <footer>
+        <p>Footer</p>
+    </footer>
+</body>
+</html>

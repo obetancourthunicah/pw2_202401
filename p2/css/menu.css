@@ -1,0 +1,27 @@
+header {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--secondary-color);
+    color: var(--secondary-text-color);
+}
+
+header h1 {
+    margin: 0;
+    padding-left: var(--standard-padding);
+}
+header nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+header nav ul li a{
+    padding: var(--standard-padding) calc(var(--standard-padding) * 1.25);
+    text-decoration: none;
+    color: var(--secondary-text-color);
+}
+
+header nav ul li a:hover {
+    background-color: var(--primary-color);
+    color: var(--primary-text-color);
+}
