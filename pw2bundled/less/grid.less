@@ -1,0 +1,32 @@
+
+.generate-columns(@suf, @n, @i : 1) when (@i =< @n ) {
+    @column-selector: ~".col-@{suf}@{i}";
+    @{column-selector} {
+        flex-basis : (100% * @i / @n);
+    }
+    @offset-selector: ~".offset-@{suf}@{i}";
+    @{offset-selector} {
+        margin-left: (100% * @i / @n);
+    }
+
+    .generate-columns(@suf, @n, (@i + 1));
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    [class*="col-"] {
+        flex: 1;
+    }
+    .generate-columns("", 6);
+    @media (min-width: @display_breaks[md]) {
+        .generate-columns("m-", 12);
+    }
+    @media (min-width: @display_breaks[lg]) {
+        .generate-columns("l-", 12);
+    }
+    @media (min-width: @display_breaks[xlg]) {
+        .generate-columns("x-", 12);
+    }
+}

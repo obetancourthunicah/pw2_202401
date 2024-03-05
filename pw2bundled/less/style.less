@@ -5,7 +5,16 @@
 
 @primary-shadow: #000;
 
+@display_breaks : {
+    md: 720px;
+    lg: 1025px;
+    xlg: 1201px;
+}
+
+
 @import "header.less";
+@import "grid.less";
+@import "form.less";
 
 * {
     box-sizing: border-box;
@@ -22,4 +31,16 @@ body {
     padding: 0;
     background-color: @secondary-bg-color;
     color: @secondary-tx-color;
+}
+
+.hero {
+    img {
+        width:100%;
+        object-fit: cover;
+    }
+}
+
+.fullimg {
+    width:100%;
+    object-fit: cover;
 }

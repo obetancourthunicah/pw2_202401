@@ -4,6 +4,7 @@
 <head>
     <title>Landing Page</title>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="less/style.less">
 </head>
 
@@ -43,7 +44,7 @@
         </section>
         <section id="logros" class="grid bg-grey">
             <div class="row reverse width960">
-                <section class="col-6 stretch padding">
+                <section class="col-6 col-m-6 col-x-4 stretch padding">
                     <h2>Logros</h2>
                     <ul class="grandList">
                         <li>Logro 1</li>
@@ -51,25 +52,33 @@
                         <li>Logro 3</li>
                     </ul>
                 </section>
-                <section class="fullimg col-6">
-                    <img src="https://picsum.photos/id/200/640/640" alt="Foto Panel Izquierdo" />
+                <section class="col-6 col-m-6 col-x-8">
+                    <img class="fullimg" src="https://picsum.photos/id/200/640/640" alt="Foto Panel Izquierdo" />
                 </section>
             </div>
             <div class="row width960">
-                <section class="col-6 stretch padding">
+                <section class="col-6 col-m-6 offset-m-3` stretch padding">
                     <h2>Contactanos</h2>
-                    <form>
-                        <label for="nombre">Nombre</label>
-                        <input type="text" id="nombre" name="nombre" />
-                        <label for="correo">Correo</label>
-                        <input type="email" id="correo" name="correo" />
-                        <label for="mensaje">Mensaje</label>
-                        <textarea id="mensaje" name="mensaje"></textarea>
-                        <input type="submit" value="Enviar" />
+                    <form class="col-6 col-m-6 modern">
+                        <div class="field">
+                            <label for="nombre">Nombre</label>
+                            <input type="text" id="nombre" name="nombre" />
+                        </div>
+                        <div class="field">
+                            <label for="correo">Correo</label>
+                            <input type="email" id="correo" name="correo" />
+                        </div>
+                        <div class="field">
+                            <label for="mensaje">Mensaje</label>
+                            <textarea id="mensaje" name="mensaje"></textarea>
+                        </div>
+                        <div class="actions">
+                            <input type="submit" value="Enviar" />
+                        </div>
                     </form>
                 </section>
-                <section class="fullimg col-6">
-                    <img src="https://picsum.photos/id/250/640/640" alt="Foto Panel Izquierdo" />
+                <section class="col-6 col-m-6">
+                    <img class="fullimg" src="https://picsum.photos/id/250/640/640" alt="Foto Panel Izquierdo" />
                 </section>
             </div>
             <div class="row padding reverse">
@@ -92,7 +101,10 @@
                     </quote>
             </div>
             <div class="row">
-                <img class="fullimg col-12" src="https://picsum.photos/id/251/1200/480" style="height:480px;">
+                <div class="col-6 col-m-10">
+                    <img class="" style="object-fit: cover; width:100%" src="https://picsum.photos/id/251/1200/480"
+                        style="height:480px;">
+                </div>
             </div>
         </section>
         <section id="formacion">
