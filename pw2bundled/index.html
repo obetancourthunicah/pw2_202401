@@ -2,39 +2,23 @@
 <html>
 
 <head>
-    <title>Landing Page</title>
+    <title>Landing Page {{title}}</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="less/style.less">
 </head>
 
 <body>
-    <header>
-        <h1>Fulanito de Tal y Porcuera</h1>
-        <nav>
-            <ul>
-                <li>
-                    <a href="#start">Generalidades</a>
-                </li>
-                <li>
-                    <a href="#logros">Logros</a>
-                </li>
-                <li>
-                    <a href="#formacion">Formación</a>
-                </li>
-                <li>
-                    <a href="#contacto">Contacto</a>
-                </li>
-            </ul>
-        </nav>
-    </header>
+    {{> headers}}
     <main>
         <section class="hero">
             <div class="textContent">
                 <h2>Generalidades</h2>
-                <p>Texto de presentación del candidato</p>
+                <p>
+                    Texto de presentación del candidato
+                    <img src="public/poc_assets_vite.jpg" />
+                </p>
             </div>
-
             <div class="boxmodel">
                 <img src="https://picsum.photos/id/453/1200/640" alt="Foto del candidato" />
             </div>
@@ -122,46 +106,7 @@
             <h2>Contacto</h2>
             <p>Correo: </p>
         </section>
-        <section class="todoCards">
-            <div class="card">
-                <img src="https://placehold.co/300x200" alt="Cart 1 Image" />
-                <h3>Card 1</h3>
-                <p>Texto de la card 1</p>
-            </div>
-            <div class="card">
-                <img src="https://placehold.co/300x200" alt="Cart 1 Image" />
-                <h3>Card 5</h3>
-                <p>Texto de la card 5</p>
-            </div>
-            <div class="card">
-                <img src="https://placehold.co/300x200" alt="Cart 1 Image" />
-                <h3>Card 2</h3>
-                <p>Texto de la card 2</p>
-            </div>
-            <div class="card">
-                <img src="https://placehold.co/300x200" alt="Cart 1 Image" />
-                <h3>Card 3</h3>
-                <p>Texto de la card 3</p>
-            </div>
-            <div class="card">
-                <img src="https://placehold.co/300x200" alt="Cart 1 Image" />
-                <h3>Card 4</h3>
-                <p>Texto de la card 4</p>
-            </div>
-        </section>
-
-        <section class="todoCards">
-            <div class="card">
-                <img src="https://placehold.co/300x200" alt="Cart 1 Image" />
-                <h3>Card 1</h3>
-                <p>Texto de la card 1</p>
-            </div>
-            <div class="card">
-                <img src="https://placehold.co/300x200" alt="Cart 1 Image" />
-                <h3>Card 4</h3>
-                <p>Texto de la card 4</p>
-            </div>
-        </section>
+       {{> cards}}
     </main>
     <footer>
 
